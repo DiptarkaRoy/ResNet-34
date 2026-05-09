@@ -12,7 +12,7 @@ A modular deep learning project implementing ResNet-34 architecture to classify 
 
 ---
 ## 📁 Project Structure
-\`\`\`text
+```text
 resnet34_project/
 ├── src/
 │   ├── __init__.py      # Package exports
@@ -24,7 +24,7 @@ resnet34_project/
 ├── data/                # Downloaded CIFAR-10 dataset
 ├── runs/                # TensorBoard event logs
 └── pyproject.toml       # Environment & dependencies
-\`\`\`
+```
 
 ---
 
@@ -33,15 +33,15 @@ resnet34_project/
 Ensure you have [uv](https://github.com/astral-sh/uv) installed.
 
 1. **Clone the repository:**
-   \`\`\`bash
+```bash
    git clone <your-repo-url>
-   cd resnet34_project
-   \`\`\`
+   cd ResNet34
+```
 
 2. **Sync dependencies:**
-   \`\`\`bash
+```bash
    uv sync
-   \`\`\`
+```
 
 ---
 
@@ -49,19 +49,19 @@ Ensure you have [uv](https://github.com/astral-sh/uv) installed.
 
 Run the training module from the root directory as a module. You can customize the run using flags:
 
-\`\`\`bash
+```bash
 # Standard run (128px resolution)
 uv run python -m src.train --epochs 50 --size 128
 
 # Fast test run
 uv run python -m src.train --epochs 5 --size 32 --batch_size 256
-\`\`\`
+```
 
 ### Monitoring Progress
 Launch TensorBoard to view live training metrics:
-\`\`\`bash
+```bash
 uv run tensorboard --logdir=runs
-\`\`\`
+```
 
 ---
 
@@ -72,9 +72,9 @@ If you move this project from your MacBook M3 to a multi-GPU server (e.g., a Lin
 
 To predict the class of a local image, use the \`predict.py\` script:
 
-\`\`\`bash
+```bash
 uv run python -m src.predict --image_path "path/to/image.jpg"
-\`\`\`
+```
 
 ---
 
