@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # ResNet-34 CIFAR-10 Classifier
 
 A modular deep learning project implementing ResNet-34 architecture to classify the CIFAR-10 dataset. This project is optimized for Apple Silicon (M3) using the MPS backend and managed with the `uv` package manager.
@@ -92,4 +91,3 @@ uv run python -m src.predict --image_path "path/to/image.jpg"
 
 ## 📜 License
 None
-EOF
