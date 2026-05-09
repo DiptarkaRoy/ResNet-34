@@ -1,6 +1,6 @@
 # ResNet-34 CIFAR-10 Classifier
 
-A modular deep learning project implementing ResNet-34 architecture to classify the CIFAR-10 dataset. This project is optimized for Apple Silicon (M3) using the MPS backend and managed with the `uv` package manager.
+A modular deep learning project implementing ResNet-34 architecture to classify the CIFAR-10 dataset. This project is device agnostic and optimised for systems with multiple GPUs and managed with the `uv` package manager.
 
 ## 🚀 Features
 * **Modular Architecture:** Separate modules for model definition, data loading, and training.
@@ -13,7 +13,7 @@ A modular deep learning project implementing ResNet-34 architecture to classify 
 ---
 ## 📁 Project Structure
 ```text
-resnet34_project/
+ResNet-34/
 ├── src/
 │   ├── __init__.py      # Package exports
 │   ├── model.py         # ResNet-34 & Residual Block architecture
@@ -51,10 +51,10 @@ Run the training module from the root directory as a module. You can customize t
 
 ```bash
 # Standard run (128px resolution)
-uv run python -m src.train --epochs 50 --size 128
+uv run python -m src.train --epochs 50 --image_size 128
 
 # Fast test run
-uv run python -m src.train --epochs 5 --size 32 --batch_size 256
+uv run python -m src.train --epochs 5 --image_size 32 --batch_size 256
 ```
 
 ### Monitoring Progress
