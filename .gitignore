@@ -17,8 +17,7 @@ logs/
 tensorboard/
 
 # Ignore all model weights
-models/*.pth
-models/*.weights
+models/
 *.h5
 *.pkl
 
