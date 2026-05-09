@@ -90,4 +90,4 @@ uv run python -m src.predict --image_path "path/to/image.jpg"
 ---
 
 ## 📜 License
-None
+This project is licensed under the MIT License - see the LICENSE file for details.
