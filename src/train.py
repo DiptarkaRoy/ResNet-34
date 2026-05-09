@@ -98,7 +98,7 @@ def train(model, criterion, optimizer, scheduler, image_size, train_loader, test
     # Only saving the weights of the model, not the entire architecture, since we can easily reconstruct it with the code.  
     # Use .module if DataParallel is active, otherwise just model
     state_dict_to_save = model.module.state_dict() if isinstance(model, torch.nn.DataParallel) else model.state_dict()
-    torch.save(state_dict_to_save, 'models/resnet34_cifar10_v1.pth')
+    torch.save(state_dict_to_save, 'resnet34_cifar10_v1.pth')
     print("Model saved.")    
 
 
