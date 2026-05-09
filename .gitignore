@@ -3,29 +3,32 @@
 env/
 venv/
 .env
-uv.lock
+.python-version
+# DO NOT ignore uv.lock or pyproject.toml - they are essential for reproducibility
 
-# --- Data & Large Files ---
-data/
-runs/
-*.csv
-*.jsonl
-*.parquet
+# --- ML/Deep Learning Data & Artifacts ---
+data/           # Raw CIFAR-10 data
+runs/           # TensorBoard event logs
+models/*.pth    # Ignore all model weights
+models/*.weights
+logs/
+tensorboard/
 *.h5
-*.weights
 *.pkl
-*.pth
 
-# --- Python & System Junk ---
+# --- Python Build & System Junk ---
 __pycache__/
 *.py[cod]
 *$py.class
 .ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
 .DS_Store
 Thumbs.db
 
-# --- ML/Deep Learning Specific ---
-# Ignore model checkpoints but keep the folder if you want
-models/
-logs/
-tensorboard/
+# --- Large/Temp Data Files ---
+*.csv
+*.jsonl
+*.parquet
+*.log
