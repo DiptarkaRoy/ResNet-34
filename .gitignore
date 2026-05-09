@@ -7,12 +7,18 @@ venv/
 # DO NOT ignore uv.lock or pyproject.toml - they are essential for reproducibility
 
 # --- ML/Deep Learning Data & Artifacts ---
-data/           # Raw CIFAR-10 data
-runs/           # TensorBoard event logs
-models/*.pth    # Ignore all model weights
-models/*.weights
+
+# Raw CIFAR-10 data
+data/
+
+# TensorBoard event logs          
+runs/
 logs/
 tensorboard/
+
+# Ignore all model weights
+models/*.pth
+models/*.weights
 *.h5
 *.pkl
 
